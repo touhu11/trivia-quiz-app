@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags-->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
     <meta name="description" content="Kenzie" />
     <meta name="author" content="Kenzie" />
     <meta name="keywords" content="Kenzie" />
-
-    <!-- Title Page-->
-    <title>Kenzie JavaScript Page</title>
-
-    <!-- CSS-->
+    <title> Jeopardy Game</title>
     <link href="style.css" rel="stylesheet" media="all" />
   </head>
 
   <body>
-    <h1>Open the Developer Tools to see the console output.</h1>
-    <h3>
-      Either right click and select "Inspect" or use the shortcut Option + ⌘ + J
-      (on macOS), or Shift + CTRL + J (on Windows/Linux).
-    </h3>
-    <script src="code.js"></script>
+
+    <div id="start_game">
+       <div id ="title"><h1>THIS IS A JEOPARDY GAME</h1></div>
+       <div><button id = start_button> Click the Button to Start the Game </button> </div>
+    </div>
+   
+    <div id="play_game">
+
+      <div><h1 id = "game_title">JEOPARDY GAME</h1></div>
+      
+      <div id = "container">
+        <div class = "items">
+          <div class = " items item category"> CLUE CATEGORY </div>
+          <div class = "items item question"> QUESTION</div>
+          <label for = "user_answer">USER ANSWER</label>
+          <div class = "items item input"> 
+            <input id = "user_input" class = "items item" name = "user_answer " placeholder = "Your answer here." value = "">
+          </div>
+          <div class = "score"></div>
+          <div class = "items item button"><button id = "submit_button"> Submit Button </button> </div>
+        </div>
+      </div>
+
+    </div>
+   
+    <div id= "continue_game">
+        <div class = "items item title"> Congratulation on Your Correct Answer</div>
+        <div class = "items item correct_answer" ></div>
+        <div>
+          <button id = "continue_button" onclick = "document.getElementById('user_input').value = ''" > CONTINUE GAME WITH THIS BUTTON. </button> 
+        </div>
+    </div>
+
+    <div id = "end_game">
+      <div id = "lose_title" class = "items item lose_title"> You lose the Game. Click the button to restart the game. </div>
+      <div id = "win_title" class = "items item win_title">You win the Game. Click the button to restart the game.</div>
+      <div><button id = "restart_button" onclick = "document.getElementById('user_input').value = ''"> START A NEW GAME </button> </div>
+    </div>
+
+    <script type = "text/javascript" src="code.js"></script>
   </body>
 </html>

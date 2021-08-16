@@ -1,1 +1,62 @@
-/* Write your CSS Here. */
+
+#start_button{
+    height: 40px;
+    width: 200px;
+}
+#restart_button{
+    height: 40px;
+    width: 200px;
+}
+#submit_button{
+    height: 50px;
+    width:200px;
+    margin-top:0;
+}
+#continue_button{
+    height: 50px;
+    width:200px;
+    margin-top:0;
+}
+
+
+#start_game{
+    display: flex;
+    flex-direction:column;
+    flex-basis: 200px;
+    }
+#continue_game{
+    display:flex;
+    flex-direction: column;
+    max-width: 400px;
+    height: 100px;
+    width: 400px;
+}
+#end_game{
+    display:flex;
+    flex-direction: column;
+    max-width: 400px;
+    height: 100px;
+    width: 400px;
+}
+
+
+#container{
+    display: flex;
+    flex-direction:column;
+    flex-basis: 300px;
+    max-width: 500px;
+    height: 300px;
+ }
+ .items.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid green;
+    width: 400px;
+    height: 40px;
+ }
+ #user_input{
+     width:98%;
+     height:300px;
+ }
+
