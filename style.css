@@ -1,62 +1,114 @@
 
 #start_button{
-    height: 40px;
+    background: #32557f;
+    color: gold;
     width: 200px;
+    height: 100px;
+    border-radius: 30%;     
 }
+
 #restart_button{
-    height: 40px;
+    background: #32557f;
+    color: gold;
     width: 200px;
+    height: 100px;
+    border-radius: 30%;  
+}
+
+#continue_button{
+    background: #32557f;
+    color: gold;
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;  
 }
 #submit_button{
     height: 50px;
     width:200px;
     margin-top:0;
 }
-#continue_button{
-    height: 50px;
-    width:200px;
-    margin-top:0;
-}
 
+
+#game_title{
+    
+    margin: 0 auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 #start_game{
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    max-width: 400px;
+    height: 100px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#play_game{
+    display: flex;
     flex-direction:column;
-    flex-basis: 200px;
-    }
+    flex-basis: 500px;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+
+    align-content: center;
+    text-align: left;
+    align-items: center;
+}
+
 #continue_game{
     display:flex;
     flex-direction: column;
     max-width: 400px;
     height: 100px;
     width: 400px;
+    margin: 0 auto;
+
+    align-content: center;
+    text-align: center;
+    align-items: center;
 }
+
 #end_game{
     display:flex;
     flex-direction: column;
     max-width: 400px;
     height: 100px;
     width: 400px;
-}
+    margin: 0 auto;
 
+    align-content: center;
+    text-align: center;
+    align-items: center;
+}
 
 #container{
     display: flex;
     flex-direction:column;
-    flex-basis: 300px;
-    max-width: 500px;
-    height: 300px;
+    flex-basis: 500px;
+    max-width: 600px;
+    /* height: 400px; */
+    margin: 0 auto;
  }
  .items.item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 2px solid green;
-    width: 400px;
+    width: 500x;
     height: 40px;
  }
  #user_input{
-     width:98%;
-     height:300px;
+     width:99%;
+     /* height:40px; */
  }
 
+ .question{
+    margin-bottom: 15px;
+ }
