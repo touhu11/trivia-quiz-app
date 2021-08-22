@@ -65,8 +65,9 @@ class Jeopardy {
         this.gameAnswers.splice(randomIndex, 1);
         document.querySelector(".category").innerText = `CLUE CATEGORY: ${this.game.title}`
         document.querySelector(".question").innerText = `CLUE: ${this.game.question}`;
+        document.querySelector(".score").innerText = `Your total score: ${this.game.totalScore} point(s)`;
     }
-    // The validateAnswer method compares a user answer with the answer of each question
+    // The validateAnswer method compares the user's answer with the answer of each question
     // from the API. Then, it displays the result based on the conditional of each comparison.
     validateAnswer() {
         this.game.userAnswer = document.getElementById("user_input").value;
@@ -107,10 +108,13 @@ class Jeopardy {
         }
         return this.game.totalScore;
     }
+    // The show method displays the target sceen with an id as the parameter.
     show(screen) {
         document.getElementById(screen);
         screen.style.display = 'block';
     }
+    // The hideAll method with the screens array as a parameter hides all the screens 
+    // with the ID's in the screens array.
     hideAll(screens) {
         screens.forEach((screen) => document.getElementById(screen).style.display = "none")
     }
@@ -134,7 +138,7 @@ document.getElementById('start_button').addEventListener('click', () => {
 // Adding an event listner to the submit button to process the user input answer
 // and validate it with the correct game answer.
 document.getElementById("submit_button").addEventListener('click', () => {
-    return jeopardy.validateAnswer()
+    return jeopardy.validateAnswer();
 })
 
 // Adding an event listner to the continue button to continue the game 
@@ -143,15 +147,13 @@ document.getElementById('continue_button').addEventListener('click', () => {
     jeopardy.hideAll(jeopardy.screens)
     jeopardy.show(play_game);
     jeopardy.displayQuestion();
-});
+})
 
 // Adding an event listener to the restart button to restart the game 
-// when his/her is incorrect.
+// when the user's answer is incorrect or when the user is able to answer all 
+// the game questions correctly.
 document.getElementById('restart_button').addEventListener('click', () => {
     jeopardy.hideAll(jeopardy.screens);
     jeopardy.show(play_game);
     jeopardy.displayQuestion();
-});
-
-
-
+})
