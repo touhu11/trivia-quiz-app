@@ -63,8 +63,8 @@ class Jeopardy {
         this.game.title = this.categoryTitle;
         this.gameQuestions.splice(randomIndex, 1);
         this.gameAnswers.splice(randomIndex, 1);
-        document.querySelector(".category").innerText = `CLUE CATEGORY: ${this.game.title}`
-        document.querySelector(".question").innerText = `CLUE: ${this.game.question}`;
+        document.querySelector(".category").innerText = `CATEGORY: ${this.game.title}`
+        document.querySelector(".question").innerText = `QUESTION: ${this.game.question}`;
         document.querySelector(".score").innerText = `Your total score: ${this.game.totalScore} point(s)`;
     }
     // The validateAnswer method compares the user's answer with the answer of each question

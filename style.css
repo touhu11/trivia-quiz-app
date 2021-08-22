@@ -25,9 +25,9 @@
     width:200px;
     margin-top:0;
 }
+
 /* Styling the content views*/
-#game_title{
-    
+#game_title{  
     margin: 0 auto;
     align-content: center;
     align-items: center;
@@ -80,6 +80,7 @@
     text-align: center;
     align-items: center;
 }
+
 /* Styling the contents*/
 #container{
     display: flex;
@@ -97,8 +98,61 @@
     height: 40px;
  }
  #user_input{
-     width:99%;
+     width:98.8%;
  }
  .question{
     margin-bottom: 15px;
  }
+
+ .items.item.category{
+    border-bottom:none;
+    background-color:aqua;
+    color:blue;
+    font-family: "Roboto", sans-serif;
+    align-items:center;
+    text-align:center;
+    border:none;
+ }
+ .items.item.question{
+    background-color:none;
+    color:blue;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px;
+    border:none;
+ }
+
+ .items.item.title{
+    background-color:aqua;
+    color:blue;
+    font-family: "Roboto", sans-serif;
+    border:none;
+ }
+
+ .items.item.correct_answer{
+    background-color:none;
+    color:blue;
+    font-family: "Roboto", sans-serif;
+    border:none;
+ }
+
+ .items.item.lose{
+    text-align:center;
+    background-color:aqua;
+    color:blue;
+    font-family: "Roboto", sans-serif;
+    border:none;
+    padding-top: 15px;
+ }
+ .items.item.win{
+    text-align:center;
+    background-color:aqua;
+    color:blue;
+    font-family: "Roboto", sans-serif;
+    border:none;
+    padding-top: 15px;
+ }
+
+ /* Setting the background color*/
+body{
+    background: lightgray;
+}
