@@ -1,11 +1,12 @@
-/**************************************************
+/*************************************************************
      Capstone Project: Creating the Trivia Quiz App
                       from an API
-**************************************************/
-// The Jeopardy class represnts an object with 
-// some properties: categoryID, categoryTitle, questions, answers, etc.
-// and some methods: fetchData, selectCategory, processQuestion, displayQuestion,
-// processAnswer, validateAnswer etc.
+**************************************************************/
+// The Jeopardy class represents an object with the following properties and methods:
+// (1). Properties: categoryID, categoryTitle, questions, answers, gameQustions, 
+//      gameAnswers, a game object with some properties, and the screens array.
+// (2). Methods: fetchData, selectCategory, processQuestion, displayQuestion,
+//      validateAnswer, hideAll(screens) and show(screen).
 class Jeopardy {
     constructor() {
         this.categoryID = "";
