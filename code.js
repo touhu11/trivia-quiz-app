@@ -166,8 +166,8 @@ document.getElementById('restart_button').addEventListener('click', () => {
     if(jeopardy.isLoaded===true){
         jeopardy.displayQuestion();
         if(jeopardy.gameQuestions.length===0){
-            this.show(end_game);
-            this.show(win_title);
+            jeopardy.show(end_game);
+            jeopardy.show(win_title);
         }
         jeopardy.isLoaded = false;
     }
