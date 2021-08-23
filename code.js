@@ -93,6 +93,9 @@ class Jeopardy {
                     this.displayQuestion();
                     this.isLoaded === false;
                 }
+                document.querySelector(".category").innerText = `CATEGORY: ${this.game.title}`
+                document.querySelector(".question").innerText = `QUESTION: ${this.game.question}`;
+                document.querySelector(".score").innerText = `Your total score: ${this.game.totalScore} point(s)`;
                 this.show(end_game);
                 this.show(win_title);
             }
@@ -111,6 +114,9 @@ class Jeopardy {
                 this.displayQuestion();
                 this.isLoaded === false;
             }
+            document.querySelector(".category").innerText = `CATEGORY: ${this.game.title}`
+            document.querySelector(".question").innerText = `QUESTION: ${this.game.question}`;
+            document.querySelector(".score").innerText = `Your total score: ${this.game.totalScore} point(s)`;
             this.show(end_game);
             this.show(lose_title);
         }
