@@ -4,7 +4,8 @@
 **************************************************************/
 // The Jeopardy class represents an object with the following properties and methods:
 // (1). Properties: categoryID, categoryTitle, questions, answers, gameQustions, 
-//      gameAnswers, a game object with some properties, and the screens array.
+//      gameAnswers, a game object with some properties, the screens array
+//      and isLoaded.
 // (2). Methods: fetchData, selectCategory, processQuestion, displayQuestion,
 //      validateAnswer, hideAll(screens) and show(screen).
 class Jeopardy {
@@ -17,6 +18,7 @@ class Jeopardy {
         this.gameAnswers = [];
         this.game = { totalScore: 0 };
         this.screens = ["start_game", "play_game", "continue_game", "end_game", "win_title", "lose_title"];
+        this.isLoaded = false;
     }
     // The fetchData method fetches the data from the API and collect the arrays 
     // of answers and questions from the API.
@@ -27,6 +29,7 @@ class Jeopardy {
             .then(data => {
                 let categoryID = this.selectCategory(data[0])
                 this.processQuestion(categoryID);
+                this.isLoaded = true;
             })
     }
     // The selectCategory method randomly selects a category ID from the API 
@@ -84,10 +87,12 @@ class Jeopardy {
                 this.game.totalScore = 0;
                 this.gameQuestions = [];
                 this.hideAll(this.screens)
+                this.isLoaded = false;
                 this.fetchData();
-                document.querySelector(".category").innerText = `CATEGORY: ${this.game.category} point(s)`;
-                document.querySelector(".question").innerText = `QUESTION: ${this.game.question} point(s)`;
-                document.querySelector(".score").innerText = `Your total score: ${this.game.totalScore} point(s)`;
+                if(this.isLoaded === true){
+                    this.displayQuestion();
+                    this.isLoaded === false;
+                }
                 this.show(end_game);
                 this.show(win_title);
             }
@@ -100,10 +105,12 @@ class Jeopardy {
             this.game.totalScore = 0;
             this.gameQuestions = [];
             this.hideAll(this.screens)
+            this.isLoaded = false;
             this.fetchData();
-            document.querySelector(".category").innerText = `CATEGORY: ${this.game.category} point(s)`;
-            document.querySelector(".question").innerText = `QUESTION: ${this.game.question} point(s)`;
-            document.querySelector(".score").innerText = `Your total score: ${this.game.totalScore} point(s)`;
+            if(this.isLoaded === true){
+                this.displayQuestion();
+                this.isLoaded === false;
+            }
             this.show(end_game);
             this.show(lose_title);
         }
@@ -156,5 +163,12 @@ document.getElementById('continue_button').addEventListener('click', () => {
 document.getElementById('restart_button').addEventListener('click', () => {
     jeopardy.hideAll(jeopardy.screens);
     jeopardy.show(play_game);
-    jeopardy.displayQuestion();
+    if(jeopardy.isLoaded===true){
+        jeopardy.displayQuestion();
+        if(jeopardy.gameQuestions.length===0){
+            this.show(end_game);
+            this.show(win_title);
+        }
+        jeopardy.isLoaded = false;
+    }
 })
