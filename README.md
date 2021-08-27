@@ -1,9 +1,11 @@
 Capstone: Creating a Trivia Quiz App for an API
 
 # Fetching the data from the API
-    ## Randomly selecting a category ID.
-    ## Using a function to fetch the questions from the selected ID.
-    ## Randomly selecting a question and display on the page.
+<ul>
+    <li>Randomly selecting a category ID.</li>
+    <li> Using a function to fetch the questions from the selected ID.</li>
+    <li>Randomly selecting a question and display on the page.</li>
+</ul>
 # Display a question with its category on the page
     ## Using the screen management to turn on the target display screen 
     and all of the other screens are off.
