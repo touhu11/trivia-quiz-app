@@ -23,7 +23,7 @@ class Jeopardy {
     // The fetchData method fetches the data from the API and collect the arrays 
     // of answers and questions from the API.
     fetchData() {
-        let fetchRandomQuestion = fetch(`http://jservice.io/api/random`);
+        let fetchRandomQuestion = fetch(`https://jservice.io/api/random`);
         fetchRandomQuestion
             .then(response => response.json())
             .then(data => {
